@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты погоды</title>
+</head>
+<body>
+    <h1>Результаты прогноза погоды</h1>
+    <p>Температура: {{ temperature }} °C</p>
+    <p>Влажность: {{ humidity }} %</p>
+    <p>Скорость ветра: {{ wind_speed }} км/ч</p>
+    <p>Вероятность дождя: {{ precipitation_probability }} %</p>
+
+    {% if temperature > 30 %}
+        <p>Погода — супер!</p>
+    {% elif temperature < 0 %}
+        <p>Ой-ой, погода плохая!</p>
+    {% else %}
+        <p>Погода в норме.</p>
+    {% endif %}
+
+    <a href="/">Назад</a>
+</body>
+</html>
